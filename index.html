@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/635a9ff99e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <aside class="tab"> 
+            <ul class="tabs">
+                <li class="li-1">
+                    <button class="tabs__item-button"  id="toggleButton-2" data-button="content-1">
+                        <!-- <img class="tabs__item-img tabs__item-active" src="images/tab_1.png"> -->
+                        <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-solid fa-bars"></i>
+                    </button>
+                </li>
+                <li class="li-1 li-1--active" id="default"> 
+                    <button class="tabs__item-button tabs__item-button--active" id="toggleButton-4" data-button="content-2"> 
+                        <i id="toggleButtonIcon-4" style="font-size: 1.5rem; display: flex;" class="style-icons--active style-icons fa-solid fa-house"></i>
+                    </button> 
+                </li>
+                <li class="li-1">
+                    <button class="tabs__item-button" id="toggleButton-5" data-button="content-3">
+                        <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-solid fa-percent"></i>
+                    </button> 
+                </li>
+                <li class="li-1">
+                    <button class="tabs__item-button" id="toggleButton-6" data-button="content-4">
+                        <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-solid fa-chart-pie"></i>
+                    </button> 
+                </li>
+                <li class="li-1">
+                    <button class="tabs__item-button" id="toggleButton-7" data-button="content-5">
+                        <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-regular fa-envelope"></i>
+                    </button> 
+                </li>
+                <li class="li-1">
+                    <button class="tabs__item-button" id="toggleButton-8" data-button="content-6">
+                        <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-regular fa-bell"></i>
+                    </button> 
+                </li>
+                <li class="li-1">
+                    <button class="tabs__item-button"  id="toggleButton" data-button="content-7">
+                        <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-solid fa-cart-shopping"></i>
+                    </button> 
+                </li>
+                <li class="li-1" id="toggle-3">
+                    <button class="tabs__item-button" id="toggleButton-3" data-button="content-8">
+                        <i id="toggleButtonIcon-3" style="font-size: 1.5rem; display: flex;" class="style-icons fa-regular fa-user"></i>
+                    </button> 
+                </li>
+            </ul>
+        </aside>
+    </header>
+    <main>
+        <div class="main" id="mainAction">
+            <section class="head">`
+                <div class="container"> 
+                    <div class="head-line">
+                        <ul class="head__style">
+                            <li class="head__li">
+                                <h1 class="head__title">Jaegar Resto</h1>
+                                <p class="head__text">Tuesday, 2 Feb 2021</p>
+                            </li>
+                            <li class="head__li-1">
+                                <div class="template">
+                                    <button class="head__temp"><img src="images/search_1.png"></img></button>
+                                    <input class="head__input" type="text" placeholder="Search for food, coffe, etc..">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="text">
+                <div class="container">
+                    <div class="tab__box">
+                        <button class="tabs__btn tabs__btn--active" data-button="content-1">Hot Dishes</button>
+                        <button class="tabs__btn" data-button="content-2">Cold Dishes</button>
+                        <button class="tabs__btn" data-button="content-3">Soup</button>
+                        <button class="tabs__btn" data-button="content-4">Grill</button>
+                        <button class="tabs__btn" data-button="content-5">Appetizer</button>
+                        <button class="tabs__btn" data-button="content-6">Dessert</button>
+                    </div>
+                </div>
+            </section>
+            <section class="card-title">
+                <div class="container">
+                    <div class="text">
+                        <h1 class="text__title">Choose Dishes</h1>
+                        <div class="choose__select" id="select">
+                            <button class="img-item">
+                                <img  src="/images/icons8_expand_arrow_96px 1.png"></button>
+                            </button>
+                            <h3 class="select__text">Price</h3>
+                            <div class="menu-btn">
+                                <a class="select__title" >Name</a>
+                                <a class="select__title select__title-1" >Favourite</a>
+                            </div>  
+                        </div>
+                    </div>                
+                </div>
+            </section>
+            <section class="card">
+                <div class="container">
+                    <div class="tabs__content">
+                        <div class="tabs__content-item tabs__content-item--active" id="content-1">
+                            <div class="card-item">
+                                <ul class="card-back">
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-2.png" alt="">
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">20 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Spicy seasoned seafood noodles', '2.29', '20', '1','images/dish-2.png')">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">11 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Salted Pasta with mushroom sauce', '2.69', '11', '2','images/dish-1.png')">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-3.png" alt="">
+                                        <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
+                                        <p class="card__price">$ 2.99</p>
+                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Beef dumpling in hot and sour soup', '2.99', '16', '3','images/dish-3.png')">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-4.png" alt="">
+                                        <h2 class="card__title">Healthy noodle with spinach leaf</h2>
+                                        <p class="card__price">$ 3.29</p>
+                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Healthy noodle with spinach leaf', '3.29', '22', '4','images/dish-4.png')">Add</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>    
+                        </div>
+                        <div class="tabs__content-item " id="content-2">
+                            <div class="card-item">
+                                <ul class="card-back">
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-3.png" alt="">
+                                        <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
+                                        <p class="card__price">$ 2.99</p>
+                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-2.png" alt="">
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">20 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">11 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-4.png" alt="">
+                                        <h2 class="card__title">Healthy noodle with spinach leaf</h2>
+                                        <p class="card__price">$ 3.29</p>
+                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>    
+                        </div>
+                        <div class="tabs__content-item " id="content-3">
+                            <div class="card-item">
+                                <ul class="card-back">
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">20 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-2.png" alt="">
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">11 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-3.png" alt="">
+                                        <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
+                                        <p class="card__price">$ 2.99</p>
+                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-4.png" alt="">
+                                        <h2 class="card__title">Healthy noodle with spinach leaf</h2>
+                                        <p class="card__price">$ 3.29</p>
+                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                               
+                            </div>  
+                        </div>
+                        <div class="tabs__content-item " id="content-4">
+                            <div class="card-item">
+                                <ul class="card-back">
+                                    
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-3.png" alt="">
+                                        <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
+                                        <p class="card__price">$ 2.99</p>
+                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-4.png" alt="">
+                                        <h2 class="card__title">Healthy noodle with spinach leaf</h2>
+                                        <p class="card__price">$ 3.29</p>
+                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">20 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-2.png" alt="">
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">11 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                               
+                            </div> 
+                        </div>
+                        <div class="tabs__content-item " id="content-5">
+                            <div class="card-item">
+                                <ul class="card-back">
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">20 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-2.png" alt="">
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">11 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-3.png" alt="">
+                                        <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
+                                        <p class="card__price">$ 2.99</p>
+                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-4.png" alt="">
+                                        <h2 class="card__title">Healthy noodle with spinach leaf</h2>
+                                        <p class="card__price">$ 3.29</p>
+                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                               
+                            </div>
+                        </div>
+                        <div class="tabs__content-item " id="content-6">
+                            <div class="card-item">
+                                <ul class="card-back">
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">20 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-2.png" alt="">
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">11 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-3.png" alt="">
+                                        <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
+                                        <p class="card__price">$ 2.99</p>
+                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-4.png" alt="">
+                                        <h2 class="card__title">Healthy noodle with spinach leaf</h2>
+                                        <p class="card__price">$ 3.29</p>
+                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn">Add</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                <div>
+                    <div>
+                        <div class="window__item" id="windowDiv">
+                            <h1 class="window__text">Orders</h1>
+                            <img class="window__img" src="images/English breakfast-pana 1.png" alt="">
+                            <h1 class="window__text-2">No Order</h1>
+                            <p class="window__text-title">Go find the products you like</p>
+                            <button class="window__btn">To Order</button>
+                        </div>
+                    </div>
+                    <div class="bg__color" id="bg__color-1"></div>
+                </div>
+                <div>
+                    <div>
+                        <div class="function" id="functionDiv">
+                            <h1 class="function__head-title">Functions</h1>
+                            <div class="function--background" >
+                                <div class="function__items" id="function-information">
+                                    <img class="function__img" src="/images/func_1.png" alt="">
+                                    <h1 class="function_title">Information</h1>
+                                </div>
+                                <div class="function__items" >
+                                    <img class="function__img" src="/images/func_2.png" alt="">
+                                    <h1 class="function_title">Language</h1>
+                                </div>
+                                <div class="function__items"  id="order-information">
+                                    <img class="function__img" src="/images/func_3.png" alt="">
+                                    <h1 class="function_title">Order history</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg__color" id="bg__color-1"></div>
+                </div>
+                <div>
+                    <div>
+                        <div class="profile" id="profileDiv">
+                            <h1 class="order-header--text">Profil</h1>
+                            <div class="profile--background">
+                                <div>
+                                    <div class="profile--head-title">
+                                        <div class="ellipse"><h1 class="head-title">D</h1></div>
+                                        <h1 class="head-title-1">Denis</h1>
+                                    </div>
+                                    <a class="link-order">Edit Profile</a>
+                                </div>
+                            </div>
+
+                            <div class="order-div">
+                                <div class="order--history">
+                                    <img class="order--history-img" src="images/func_3.png" alt="">
+                                    <p class="order-title">Order history</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg__color" id="bg__color-1"></div>
+                </div>
+                <div>
+                    <div>
+                        <div class="information" id="informationDiv">
+                            <h1 class="information--head-title">Information</h1>
+                            <div class="information--background">
+                                <div class="information__items">
+                                    <img class="information--img" src="images/info_1.png" alt="">
+                                    <h1 class="information--text">+998 71 000 00 71</h1>
+                                </div>
+                                <div class="information__items">
+                                    <img class="information--img" src="images/info_2.png" alt="">
+                                    <h1 class="information--text">Tashkent, str. Amir Temur 15</h1>
+                                </div>
+                                <div class="information__items">
+                                    <img class="information--img" src="images/info_3.png" alt="">
+                                    <h1 class="information--text">F.P.D_77@gmail.com</h1>
+                                </div>
+                                <div class="information__items">
+                                    <img class="information--img" src="images/info_4.png" alt="">
+                                    <h1 class="information--text">www.F.P.D_77.com</h1>
+                                </div>
+                                <div class="information--icon-background">
+                                    <img class="information--icon-background-items" src="images/d_info_1.png" alt="">
+                                    <img class="information--icon-background-items" src="images/d_info_2.png" alt="">
+                                    <img class="information--icon-background-items" src="images/d_info_3.png" alt="">
+                                    <img class="information--icon-background-items" src="images/d_info_4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                       <div class="order--profile-or-burger" id="orderDiv">
+                            <h1 class="order--title">Orders history</h1>
+                            <div  class="order--background">
+                                <div class="order--history-title">
+                                    <h1 class="order--background-title">Orders #34562</h1>
+                                    <p class="order--background-text">Tuesday, 2 Feb 2021</p>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="bg__color" id="bg__color-1"></div>  
+                </div>  
+                <div>
+                    <div>
+                        <div class="client--orders" id="clientDiv">
+                            <div>
+                                <div class="client--order-header">
+                                    <button class="client-buy-btn">
+                                        <img class="client--order-header-img" src="images/icon-left.png" alt="">
+                                    </button>
+                                    <h1 class="order-header-title">Orders #34562</h1>
+                                </div>
+                                <div class="client--order-button">
+                                    <button class="client--order-button-btn" type="">Dine In</button>
+                                    <button class="client--order-button-btn" type="">To Go</button>
+                                    <button class="client--order-button-btn" type="">Delivery</button>
+                                </div>
+                                <div class="client--order-texts">
+                                    <p class="client--order-texts-item-1">Item</p>
+                                    <p class="client--order-texts-item-2">Qty</p>
+                                    <p class="client--order-texts-item-3">Price</p>
+                                </div>
+                                <div class="border-bottom"></div>
+                            </div>
+
+                            <!-- <div class="order__section" id="order--head">
+                                <div class="order__section--product">
+                                    <div class="order-product">
+                                        <img class="order-product-img" src="images/dish-1.png" alt="">
+                                        <p class="order-product-text">Spicy seasoned seafood noodles</p>
+                                    </div>
+                                    <div class="order-product-price">
+                                        <p class="order-product-price-p">$ 4,58</p>
+                                    </div>
+                                </div>
+                                <div class="order--count">
+                                        <div class="order--count-bacground">
+                                            <button class="btn-background">
+                                                <img class="img-background" src="images/minus.png" alt="">
+                                            </button>
+                                            <p class="order-number">2</p>
+                                            <button class="btn-background">
+                                                <img class="img-background" src="images/plus.png" alt="">
+                                            </button>
+                                        </div>
+                                    <div class="order-count">
+                                        <p class="order-count-amount">$ 9,16</p>
+                                    </div>
+                                </div>
+                                <div class="input-order">
+                                    <input placeholder="Please, just a little bit spicy only." class="description" type="">
+                                    <button class="delete">
+                                        <img class="img-background-1" src="images/Delete.svg" alt="">
+                                    </button>
+                                </div>
+                            </div> -->
+                            <div class="create-product"></div>
+
+                            <div class="discount">
+                                <p class="discount-text">Discount</p>
+                                <p class="discount-price">$0</p>
+                            </div>
+                            <div class="total">
+                                <p class="total-sum-1">Sub total</p>
+                                <p class="total-sum"> $ 21,03</p>
+                            </div>
+                            <button class="window__btn">Continue to Payment</button>
+                        </div>
+                    </div>
+                    <div class="bg__color" id="bg__color-1"></div>  
+                </div>
+        </div>
+       
+
+        <script src="js/main.js"></script>
+        <script src="js/support.js"></script>
+    </main>
+
+</body>
+</html>
