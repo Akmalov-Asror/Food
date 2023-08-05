@@ -46,11 +46,26 @@ function giveValue(evt){
     tabTarget.textContent = data;
 }
 
-const windowDiv = document.getElementById('windowDiv');
-const toggleButton = document.getElementById('toggleButton');
-
-toggleButton.addEventListener('click', function() {
-    windowDiv.classList.toggle('window__item--active');
-});
 
 
+window.addEventListener('click', function(event) {
+    // console.log(event.target);
+})
+
+function watchAnyObject(
+    object = {},
+    methods = [],
+    callbackBefore = function () {},
+    callbackAfter = function () {},
+  ) {
+    for (let method of methods) {
+      const original = object[method].bind(object);
+      const newMethod = function (...args) {
+        callbackBefore(method, ...args);
+        const result = original.apply(null, args);
+        callbackAfter(method, ...args);
+        return result;
+      };
+      object[method] = newMethod.bind(object);
+    }
+  }

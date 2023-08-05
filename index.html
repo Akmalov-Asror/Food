@@ -6,12 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/635a9ff99e.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
         <aside class="tab"> 
             <ul class="tabs">
-                <li class="li-1">
+                <li class="li-1" id="hamburger">
                     <button class="tabs__item-button"  id="toggleButton-2" data-button="content-1">
                         <!-- <img class="tabs__item-img tabs__item-active" src="images/tab_1.png"> -->
                         <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-solid fa-bars"></i>
@@ -93,7 +94,7 @@
                         <h1 class="text__title">Choose Dishes</h1>
                         <div class="choose__select" id="select">
                             <button class="img-item">
-                                <img  src="/images/icons8_expand_arrow_96px 1.png"></button>
+                                <img class="img--active" src="/images/icons8_expand_arrow_96px 1.png"></button>
                             </button>
                             <h3 class="select__text">Price</h3>
                             <div class="menu-btn">
@@ -116,7 +117,7 @@
                                         <p class="card__price">$ 2.29</p>
                                         <h2 class="card__title-2">20 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn" onclick="AddOrder('Spicy seasoned seafood noodles', '2.29', '20', '1','images/dish-2.png')">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Spicy seasoned seafood noodles', '2.29', 20, '1','images/dish-2.png')">Add</button>
                                         </div>
                                     </li>
                                     <li class="dish-item">
@@ -125,7 +126,7 @@
                                         <p class="card__price">$ 2.69</p>
                                         <h2 class="card__title-2">11 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn" onclick="AddOrder('Salted Pasta with mushroom sauce', '2.69', '11', '2','images/dish-1.png')">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Salted Pasta with mushroom sauce', '2.69', 11, '2','images/dish-1.png')">Add</button>
                                         </div>
                                     </li>
                                     <li class="dish-item">
@@ -134,7 +135,7 @@
                                         <p class="card__price">$ 2.99</p>
                                         <h2 class="card__title-2">16 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn" onclick="AddOrder('Beef dumpling in hot and sour soup', '2.99', '16', '3','images/dish-3.png')">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Beef dumpling in hot and sour soup', '2.99', 16, '3','images/dish-3.png')">Add</button>
                                         </div>
                                     </li>
                                     <li class="dish-item">
@@ -143,7 +144,7 @@
                                         <p class="card__price">$ 3.29</p>
                                         <h2 class="card__title-2">22 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn" onclick="AddOrder('Healthy noodle with spinach leaf', '3.29', '22', '4','images/dish-4.png')">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Healthy noodle with spinach leaf', '3.29', 22, '4','images/dish-4.png')">Add</button>
                                         </div>
                                     </li>
                                 </ul>
@@ -156,27 +157,27 @@
                                         <img class="plus" src="images/dish-3.png" alt="">
                                         <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
                                         <p class="card__price">$ 2.99</p>
-                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <h2 class="card__title-2">35 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
-                                        </div>
-                                    </li>
-                                    <li class="dish-item">
-                                        <img class="plus" src="images/dish-2.png" alt="">
-                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
-                                        <p class="card__price">$ 2.29</p>
-                                        <h2 class="card__title-2">20 Bowls available</h2>
-                                        <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Beef dumpling in hot and sour soup', '2.99', 35, '5','images/dish-3.png')">Add</button>
                                         </div>
                                     </li>
                                     <li class="dish-item">
                                         <img class="plus" src="images/dish-1.png" alt="">
                                         <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
                                         <p class="card__price">$ 2.69</p>
-                                        <h2 class="card__title-2">11 Bowls available</h2>
+                                        <h2 class="card__title-2">40 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Salted Pasta with mushroom sauce', '2.69', 40, '6','images/dish-1.png')">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-2.png" alt="">
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">10 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Spicy seasoned seafood noodles', '2.29', 10, '7','images/dish-2.png')">Add</button>
                                         </div>
                                     </li>
                                     
@@ -184,9 +185,9 @@
                                         <img class="plus" src="images/dish-4.png" alt="">
                                         <h2 class="card__title">Healthy noodle with spinach leaf</h2>
                                         <p class="card__price">$ 3.29</p>
-                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <h2 class="card__title-2">30 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Healthy noodle with spinach leaf', '3.29', 30, '8','images/dish-4.png')">Add</button>
                                         </div>
                                     </li>
                                 </ul>
@@ -196,39 +197,40 @@
                             <div class="card-item">
                                 <ul class="card-back">
                                     <li class="dish-item">
-                                        <img class="plus" src="images/dish-1.png" alt="">
-                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
-                                        <p class="card__price">$ 2.29</p>
-                                        <h2 class="card__title-2">20 Bowls available</h2>
+                                        <img class="plus" src="images/dish-3.png" alt="">
+                                        <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
+                                        <p class="card__price">$ 2.99</p>
+                                        <h2 class="card__title-2">18 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Beef dumpling in hot and sour soup', '2.99', 18, '9','images/dish-3.png')">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">19 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Salted Pasta with mushroom sauce', '2.69', 19, '10','images/dish-1.png')">Add</button>
                                         </div>
                                     </li>
                                     <li class="dish-item">
                                         <img class="plus" src="images/dish-2.png" alt="">
-                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
-                                        <p class="card__price">$ 2.69</p>
-                                        <h2 class="card__title-2">11 Bowls available</h2>
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">17 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Spicy seasoned seafood noodles', '2.29', 17, '11','images/dish-2.png')">Add</button>
                                         </div>
                                     </li>
-                                    <li class="dish-item">
-                                        <img class="plus" src="images/dish-3.png" alt="">
-                                        <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
-                                        <p class="card__price">$ 2.99</p>
-                                        <h2 class="card__title-2">16 Bowls available</h2>
-                                        <div class="btn__item">
-                                            <button class="card__btn">Add</button>
-                                        </div>
-                                    </li>
+                                    
                                     <li class="dish-item">
                                         <img class="plus" src="images/dish-4.png" alt="">
                                         <h2 class="card__title">Healthy noodle with spinach leaf</h2>
                                         <p class="card__price">$ 3.29</p>
-                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <h2 class="card__title-2">31 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Healthy noodle with spinach leaf', '3.29', 31, '12','images/dish-4.png')">Add</button>
                                         </div>
                                     </li>
                                 </ul>
@@ -243,79 +245,82 @@
                                         <img class="plus" src="images/dish-3.png" alt="">
                                         <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
                                         <p class="card__price">$ 2.99</p>
-                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <h2 class="card__title-2">23 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
-                                        </div>
-                                    </li>
-                                    <li class="dish-item">
-                                        <img class="plus" src="images/dish-4.png" alt="">
-                                        <h2 class="card__title">Healthy noodle with spinach leaf</h2>
-                                        <p class="card__price">$ 3.29</p>
-                                        <h2 class="card__title-2">22 Bowls available</h2>
-                                        <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Beef dumpling in hot and sour soup', '2.99', 23, '13','images/dish-3.png')">Add</button>
                                         </div>
                                     </li>
                                     <li class="dish-item">
                                         <img class="plus" src="images/dish-1.png" alt="">
-                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
-                                        <p class="card__price">$ 2.29</p>
-                                        <h2 class="card__title-2">20 Bowls available</h2>
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">21 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Salted Pasta with mushroom sauce', '2.69', 21, '14','images/dish-1.png')">Add</button>
                                         </div>
                                     </li>
                                     <li class="dish-item">
                                         <img class="plus" src="images/dish-2.png" alt="">
-                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
-                                        <p class="card__price">$ 2.69</p>
-                                        <h2 class="card__title-2">11 Bowls available</h2>
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">44 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Spicy seasoned seafood noodles', '2.29', 44, '15','images/dish-2.png')">Add</button>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-4.png" alt="">
+                                        <h2 class="card__title">Healthy noodle with spinach leaf</h2>
+                                        <p class="card__price">$ 3.29</p>
+                                        <h2 class="card__title-2">8 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Healthy noodle with spinach leaf', '3.29', 8, '16','images/dish-4.png')">Add</button>
                                         </div>
                                     </li>
                                 </ul>
                                
-                            </div> 
+                            </div>
                         </div>
                         <div class="tabs__content-item " id="content-5">
                             <div class="card-item">
                                 <ul class="card-back">
-                                    <li class="dish-item">
-                                        <img class="plus" src="images/dish-1.png" alt="">
-                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
-                                        <p class="card__price">$ 2.29</p>
-                                        <h2 class="card__title-2">20 Bowls available</h2>
-                                        <div class="btn__item">
-                                            <button class="card__btn">Add</button>
-                                        </div>
-                                    </li>
-                                    <li class="dish-item">
-                                        <img class="plus" src="images/dish-2.png" alt="">
-                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
-                                        <p class="card__price">$ 2.69</p>
-                                        <h2 class="card__title-2">11 Bowls available</h2>
-                                        <div class="btn__item">
-                                            <button class="card__btn">Add</button>
-                                        </div>
-                                    </li>
+                                    
                                     <li class="dish-item">
                                         <img class="plus" src="images/dish-3.png" alt="">
                                         <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
                                         <p class="card__price">$ 2.99</p>
-                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <h2 class="card__title-2">13 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Beef dumpling in hot and sour soup', '2.99', 13, '13','images/dish-3.png')">Add</button>
                                         </div>
                                     </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">6 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Salted Pasta with mushroom sauce', '2.69', 6, '14','images/dish-1.png')">Add</button>
+                                        </div>
+                                    </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-2.png" alt="">
+                                        <h2 class="card__title">Spicy seasoned seafood noodles</h2>
+                                        <p class="card__price">$ 2.29</p>
+                                        <h2 class="card__title-2">50 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Spicy seasoned seafood noodles', '2.29', 50, '15','images/dish-2.png')">Add</button>
+                                        </div>
+                                    </li>
+                                    
                                     <li class="dish-item">
                                         <img class="plus" src="images/dish-4.png" alt="">
                                         <h2 class="card__title">Healthy noodle with spinach leaf</h2>
                                         <p class="card__price">$ 3.29</p>
-                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <h2 class="card__title-2">28 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Healthy noodle with spinach leaf', '3.29', 28, '16','images/dish-4.png')">Add</button>
                                         </div>
                                     </li>
                                 </ul>
@@ -326,41 +331,41 @@
                             <div class="card-item">
                                 <ul class="card-back">
                                     <li class="dish-item">
-                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <img class="plus" src="images/dish-2.png" alt="">
                                         <h2 class="card__title">Spicy seasoned seafood noodles</h2>
                                         <p class="card__price">$ 2.29</p>
-                                        <h2 class="card__title-2">20 Bowls available</h2>
+                                        <h2 class="card__title-2">12 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
-                                        </div>
-                                    </li>
-                                    <li class="dish-item">
-                                        <img class="plus" src="images/dish-2.png" alt="">
-                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
-                                        <p class="card__price">$ 2.69</p>
-                                        <h2 class="card__title-2">11 Bowls available</h2>
-                                        <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Spicy seasoned seafood noodles', '2.29', 12, '17','images/dish-2.png')">Add</button>
                                         </div>
                                     </li>
                                     <li class="dish-item">
                                         <img class="plus" src="images/dish-3.png" alt="">
                                         <h2 class="card__title">Beef dumpling in hot and sour soup</h2>
                                         <p class="card__price">$ 2.99</p>
-                                        <h2 class="card__title-2">16 Bowls available</h2>
+                                        <h2 class="card__title-2">30 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Beef dumpling in hot and sour soup', '2.99', 30, '18','images/dish-3.png')">Add</button>
                                         </div>
                                     </li>
                                     <li class="dish-item">
                                         <img class="plus" src="images/dish-4.png" alt="">
                                         <h2 class="card__title">Healthy noodle with spinach leaf</h2>
                                         <p class="card__price">$ 3.29</p>
-                                        <h2 class="card__title-2">22 Bowls available</h2>
+                                        <h2 class="card__title-2">26 Bowls available</h2>
                                         <div class="btn__item">
-                                            <button class="card__btn">Add</button>
+                                            <button class="card__btn" onclick="AddOrder('Healthy noodle with spinach leaf', '3.29', 26, '19','images/dish-4.png')">Add</button>
                                         </div>
                                     </li>
+                                    <li class="dish-item">
+                                        <img class="plus" src="images/dish-1.png" alt="">
+                                        <h2 class="card__title">Salted Pasta with mushroom sauce</h2>
+                                        <p class="card__price">$ 2.69</p>
+                                        <h2 class="card__title-2">14 Bowls available</h2>
+                                        <div class="btn__item">
+                                            <button class="card__btn" onclick="AddOrder('Salted Pasta with mushroom sauce', '2.69', 14, '20','images/dish-1.png')">Add</button>
+                                        </div>
+                                    </li> 
                                 </ul>
                                
                             </div>
@@ -371,11 +376,16 @@
                 <div>
                     <div>
                         <div class="window__item" id="windowDiv">
-                            <h1 class="window__text">Orders</h1>
+                            <div class="element">
+                                <button class="client-buy-btn active" id="back--order">
+                                    <img class="client--order-header-img" src="images/icon-left.png" alt="">
+                                </button>
+                                <h1 class="window__text">Orders</h1>
+                            </div>
                             <img class="window__img" src="images/English breakfast-pana 1.png" alt="">
                             <h1 class="window__text-2">No Order</h1>
                             <p class="window__text-title">Go find the products you like</p>
-                            <button class="window__btn">To Order</button>
+                            <button id="window--connect--orders" class="window__btn">To Order</button>
                         </div>
                     </div>
                     <div class="bg__color" id="bg__color-1"></div>
@@ -383,7 +393,12 @@
                 <div>
                     <div>
                         <div class="function" id="functionDiv">
-                            <h1 class="function__head-title">Functions</h1>
+                            <div class="element active-1">
+                                <button class="client-buy-btn active" id="back--order">
+                                    <img class="client--order-header-img" src="images/icon-left.png" alt="">
+                                </button>
+                                <h1 class="function__head-title">Functions</h1>  
+                            </div>
                             <div class="function--background" >
                                 <div class="function__items" id="function-information">
                                     <img class="function__img" src="/images/func_1.png" alt="">
@@ -405,7 +420,12 @@
                 <div>
                     <div>
                         <div class="profile" id="profileDiv">
-                            <h1 class="order-header--text">Profil</h1>
+                            <div class="element">
+                                <button class="client-buy-btn active" id="back--order">
+                                    <img class="client--order-header-img" src="images/icon-left.png" alt="">
+                                </button>
+                                <h1 class="order-header--text">Profil</h1>
+                            </div>
                             <div class="profile--background">
                                 <div>
                                     <div class="profile--head-title">
@@ -417,7 +437,7 @@
                             </div>
 
                             <div class="order-div">
-                                <div class="order--history">
+                                <div class="order--history" id="gotoClientOrder">
                                     <img class="order--history-img" src="images/func_3.png" alt="">
                                     <p class="order-title">Order history</p>
                                 </div>
@@ -429,7 +449,12 @@
                 <div>
                     <div>
                         <div class="information" id="informationDiv">
-                            <h1 class="information--head-title">Information</h1>
+                            <div class="element element-plus">
+                                <button class="client-buy-btn active" id="back--order">
+                                    <img class="client--order-header-img" src="images/icon-left.png" alt="">
+                                </button>
+                                <h1 class="information--head-title">Information</h1>
+                            </div>
                             <div class="information--background">
                                 <div class="information__items">
                                     <img class="information--img" src="images/info_1.png" alt="">
@@ -460,12 +485,17 @@
                 <div>
                     <div>
                        <div class="order--profile-or-burger" id="orderDiv">
-                            <h1 class="order--title">Orders history</h1>
+                           <div class="element order--element">
+                               <button class="client-buy-btn active" id="back--order">
+                                   <img class="client--order-header-img" src="images/icon-left.png" alt="">
+                                </button>
+                                <h1 class="order--title">Orders history</h1>
+                            </div>
                             <div  class="order--background">
-                                <div class="order--history-title">
+                                <!-- <div class="order--history-title">
                                     <h1 class="order--background-title">Orders #34562</h1>
                                     <p class="order--background-text">Tuesday, 2 Feb 2021</p>
-                                </div>
+                                </div> -->
                             </div>
                        </div>
                     </div>
@@ -476,10 +506,10 @@
                         <div class="client--orders" id="clientDiv">
                             <div>
                                 <div class="client--order-header">
-                                    <button class="client-buy-btn">
+                                    <button class="client-buy-btn" id="back--order">
                                         <img class="client--order-header-img" src="images/icon-left.png" alt="">
                                     </button>
-                                    <h1 class="order-header-title">Orders #34562</h1>
+                                    <h1 class="order-header-title"></h1>
                                 </div>
                                 <div class="client--order-button">
                                     <button class="client--order-button-btn" type="">Dine In</button>
@@ -526,7 +556,7 @@
                                 </div>
                             </div> -->
                             <div class="create-product"></div>
-
+                            
                             <div class="discount">
                                 <p class="discount-text">Discount</p>
                                 <p class="discount-price">$0</p>
@@ -535,14 +565,102 @@
                                 <p class="total-sum-1">Sub total</p>
                                 <p class="total-sum"> $ 21,03</p>
                             </div>
-                            <button class="window__btn">Continue to Payment</button>
+                            <button class="window__btn btn-elment" id="windowButtonDiv">Continue to Payment</button>
+                        </div>
+                    </div>
+                    <div class="bg__color" id="bg__color-1"></div>  
+                </div>
+                <div>
+                    <div>
+                        <div class="order--payment" id="paymentDiv">
+                        <div>
+                            <div class="order--payment-header">
+                                    <h1 class="order--payment-title">Payment</h1>
+                                <p class="order--payment-text">3 payment method available</p>
+                            </div> 
+                        </div>
+                        <div class="border-bottom">   
+                        </div>
+                        <form aria-required="false" action="">
+                        <div class="order--payment-section">
+                            <h2 class="order-payment-section-title">Payment Method</h2>
+                            <div class="order--payment-cards">
+                                <div class="order--payment-card order--payment-card--active" id="button-1">
+                                    <div class="new-card--active">
+                                        <img class="order--payment-img " src="images/Card.svg" >
+                                        <img class="img-activator img-activator--active" src="images/Mask.svg" id="imgActive-1">    
+                                    </div>
+                                    <p class="card-title">Credit Card</p>   
+                                </div>
+                                <div class="order--payment-card" id="button-2">
+                                    <div class="new-card--active">
+                                        <img class="order--payment-img" src="images/Paypal.svg" alt="">
+                                        <img class="img-activator" src="images/Mask.svg" alt="" id="imgActive-2">    
+                                    </div>
+                                    <p class="card-title">Paypal</p>
+                                </div>
+                                <div class="order--payment-card" id="button-3">
+                                    <div class="new-card--active">
+                                        <img class="order--payment-img" src="images/Wallet.svg" alt="">
+                                        <img class="img-activator" src="images/Mask.svg" alt="" id="imgActive-3">    
+                                    </div>
+                                    <p class="card-title">Cash</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-items">
+                            <p class="card-title">Cardholder Name</p>
+                            <input required class="description-card-window" placeholder="Levi Ackerman" type="text">
+                        </div>
+                        <div class="card-items">
+                            <p class="card-title">Card Number</p>
+                            <input required id="cardNumber" class="description-card-window" placeholder="2564 1421 0897 1244" type="text">
+                        </div>
+                        <div class="input--section card-items plus--items">
+                            <div>
+                                <p class="card-title">Expiration Date</p>
+                                <input required id="expirationDate" class="description-card" placeholder="02/2022" type="text">
+                            </div>
+                            <div>
+                                <p class="card-title">CVV</p>
+                                <input required class="description-card" id="numberInput" type="password">
+                            </div>
+                        </div>
+                        <div class="border-bottom">
+                        </div>
+                        <div class="order--payment-select-card">
+                            <div>
+                                <p class="card-title plus--item-2">Order Type</p>
+                                <div class="choose__select-card" id="select">
+                                    <button class="img-item">
+                                        <img  class="choose__select-card-img" src="/images/icons8_expand_arrow_96px 1.png">
+                                    </button>
+                                    <h3 class="select__text--title">Dine In</h3>
+                                    <div class="menu-btn">
+                                        <a class="select__title" >Name</a>
+                                        <a class="select__title select__title-1" >Favourite</a>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div>
+                                <p class="card-title plus--item-2">Table no.</p>
+                                <div>
+
+                                    <input required class="description-card"  placeholder="140" type="number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment--button">
+                            <button id="cancel" class="payment--button-btn">Cancel</button>
+                            <button id="gotoOrder" class="payment--button-btn">Confirm Payment</button>
+                            </div>
+                        </form>
                         </div>
                     </div>
                     <div class="bg__color" id="bg__color-1"></div>  
                 </div>
         </div>
        
-
         <script src="js/main.js"></script>
         <script src="js/support.js"></script>
     </main>
