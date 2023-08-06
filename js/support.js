@@ -132,11 +132,19 @@ const toggle = document.getElementById('toggle-3');
 const toggleButtonIcon3 = document.getElementById('toggleButtonIcon-3');
 const toggleButtonIcon4 = document.getElementById('toggleButtonIcon-4');
 
-toggleButton3.addEventListener('click', function(e){
-    profileDiv.classList.toggle('profile--active');
+toggleButton3.addEventListener('click', function(){
+    if (profileDiv.classList.contains('profile--active')) {
+        profileDiv.classList.toggle('profile--active');
+        wDiv.classList.add('bg__color--active');
+    }else{
+        profileDiv.classList.toggle('profile--active');
+        wDiv.classList.remove('bg__color--active');
+    }
     if (!toggleButton3.classList.contains('tabs__item-button--active')) {
         functionDiv.classList.remove('function--active');
         windowItemActive.classList.remove('window__item--active');
+        orderDiv.classList.remove('order--profile-or-burger--active'); 
+        informationDiv.classList.remove('information--active'); 
         if (!wDiv.classList.contains('bg__color--active')) {
             wDiv.classList.add('bg__color--active');
         }
@@ -151,6 +159,9 @@ toggleButton3.addEventListener('click', function(e){
         }
     functionDiv.classList.remove('function--active');
     windowItemActive.classList.remove('window__item--active');
+    orderDiv.classList.remove('order--profile-or-burger--active'); 
+    informationDiv.classList.remove('information--active'); 
+    
     }
 });
 
@@ -557,6 +568,7 @@ const backOrder = document.getElementById('back--order');
 backOrder.addEventListener('click', function(){
     windowItemActive.classList.add('window__item--active');
     clientDiv.classList.remove('client--orders--active');
+    console.log('sdfsbfbsjfbh');
 });
 
 const btn1 = document.getElementById('button-1');
@@ -735,4 +747,70 @@ const gotoClientOrder = document.getElementById('gotoClientOrder');
 gotoClientOrder.addEventListener('click', function () {
     orderDiv.classList.add('order--profile-or-burger--active'); 
     profileDiv.classList.remove('profile--active');
-})
+});
+
+const hamburger = document.getElementById('hamburger');
+
+function applyRadius(index) {
+    const buttons = document.querySelectorAll('.li-1');
+
+    if (index > -1) {
+        buttons[index - 1].classList.add('border-bottom-right');
+    }
+
+    if (index < buttons.length - 1) {
+        buttons[index + 1].classList.add('border-top-right');
+    }
+}
+const back = document.getElementById('back');
+
+back.addEventListener('click' , function(){
+    if (functionDiv.classList.contains('function--active')) {
+        functionDiv.classList.remove('function--active');
+    }
+    wDiv.classList.remove('bg__color--active');
+});
+const back2 = document.getElementById('back-2');
+back2.addEventListener('click' , function(){
+    if (toggleButton2.classList.contains('tabs__item-button--active')) {
+        if(orderDiv.classList.contains('order--profile-or-burger--active')){
+            orderDiv.classList.remove('order--profile-or-burger--active'); 
+            if (!functionDiv.classList.contains('function--active')) {
+                functionDiv.classList.add('function--active');
+            }
+        } 
+    }else if (toggleButton3.classList.contains('tabs__item-button--active')) {
+        if(orderDiv.classList.contains('order--profile-or-burger--active')){
+            orderDiv.classList.remove('order--profile-or-burger--active'); 
+            if (!profileDiv.classList.contains('profile--active')) {
+                profileDiv.classList.add('profile--active');
+            }
+        }     
+    }
+});
+
+const back3 = document.getElementById('back-3');
+back3.addEventListener('click' , function(){
+    if(informationDiv.classList.contains('information--active')){
+        informationDiv.classList.remove('information--active'); 
+        if (!functionDiv.classList.contains('function--active')) {
+            functionDiv.classList.add('function--active');
+        }
+    } 
+});
+
+const back4 = document.getElementById('back-4');
+back4.addEventListener('click', function () {
+    if (windowItemActive.classList.contains('window__item--active')) {
+        windowItemActive.classList.remove('window__item--active');
+    }
+    wDiv.classList.remove('bg__color--active');
+});
+
+const back5 = document.getElementById('back-5');
+back5.addEventListener('click', function () {
+    if (profileDiv.classList.contains('profile--active')) {
+        profileDiv.classList.remove('profile--active');
+    }
+    wDiv.classList.remove('bg__color--active');
+});

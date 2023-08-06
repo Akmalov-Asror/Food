@@ -12,44 +12,44 @@
     <header>
         <aside class="tab"> 
             <ul class="tabs">
-                <li class="li-1" id="hamburger">
-                    <button class="tabs__item-button"  id="toggleButton-2" data-button="content-1">
+                <li class="li-1"onclick="applyRadius(1)" id="hamburger">
+                    <button  class="tabs__item-button"  id="toggleButton-2" data-button="content-1">
                         <!-- <img class="tabs__item-img tabs__item-active" src="images/tab_1.png"> -->
                         <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-solid fa-bars"></i>
                     </button>
                 </li>
-                <li class="li-1 li-1--active" id="default"> 
-                    <button class="tabs__item-button tabs__item-button--active" id="toggleButton-4" data-button="content-2"> 
+                <li class="li-1 li-1--active" onclick="applyRadius(2)" id="default"> 
+                    <button  class="tabs__item-button tabs__item-button--active" id="toggleButton-4" data-button="content-2"> 
                         <i id="toggleButtonIcon-4" style="font-size: 1.5rem; display: flex;" class="style-icons--active style-icons fa-solid fa-house"></i>
                     </button> 
                 </li>
-                <li class="li-1">
-                    <button class="tabs__item-button" id="toggleButton-5" data-button="content-3">
+                <li class="li-1"onclick="applyRadius(3)" id="discount">
+                    <button  class="tabs__item-button" id="toggleButton-5" data-button="content-3">
                         <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-solid fa-percent"></i>
                     </button> 
                 </li>
-                <li class="li-1">
-                    <button class="tabs__item-button" id="toggleButton-6" data-button="content-4">
+                <li class="li-1"onclick="applyRadius(4)" id="part">
+                    <button  class="tabs__item-button" id="toggleButton-6" data-button="content-4">
                         <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-solid fa-chart-pie"></i>
                     </button> 
                 </li>
-                <li class="li-1">
-                    <button class="tabs__item-button" id="toggleButton-7" data-button="content-5">
+                <li class="li-1"onclick="applyRadius(5)" id="email">
+                    <button  class="tabs__item-button" id="toggleButton-7" data-button="content-5">
                         <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-regular fa-envelope"></i>
                     </button> 
                 </li>
-                <li class="li-1">
-                    <button class="tabs__item-button" id="toggleButton-8" data-button="content-6">
+                <li class="li-1"onclick="applyRadius(6)" id="bell">
+                    <button  class="tabs__item-button" id="toggleButton-8" data-button="content-6">
                         <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-regular fa-bell"></i>
                     </button> 
                 </li>
-                <li class="li-1">
-                    <button class="tabs__item-button"  id="toggleButton" data-button="content-7">
+                <li class="li-1"onclick="applyRadius(7)" id="cart">
+                    <button  class="tabs__item-button"  id="toggleButton" data-button="content-7">
                         <i style="font-size: 1.5rem; display: flex;" class="style-icons fa-solid fa-cart-shopping"></i>
                     </button> 
                 </li>
-                <li class="li-1" id="toggle-3">
-                    <button class="tabs__item-button" id="toggleButton-3" data-button="content-8">
+                <li class="li-1"onclick="applyRadius(8)" id="toggle-3">
+                    <button  class="tabs__item-button" id="toggleButton-3" data-button="content-8">
                         <i id="toggleButtonIcon-3" style="font-size: 1.5rem; display: flex;" class="style-icons fa-regular fa-user"></i>
                     </button> 
                 </li>
@@ -377,7 +377,7 @@
                     <div>
                         <div class="window__item" id="windowDiv">
                             <div class="element">
-                                <button class="client-buy-btn active" id="back--order">
+                                <button class="client-buy-btn active" id="back-4">
                                     <img class="client--order-header-img" src="images/icon-left.png" alt="">
                                 </button>
                                 <h1 class="window__text">Orders</h1>
@@ -394,7 +394,7 @@
                     <div>
                         <div class="function" id="functionDiv">
                             <div class="element active-1">
-                                <button class="client-buy-btn active" id="back--order">
+                                <button class="client-buy-btn active" id="back">
                                     <img class="client--order-header-img" src="images/icon-left.png" alt="">
                                 </button>
                                 <h1 class="function__head-title">Functions</h1>  
@@ -421,7 +421,7 @@
                     <div>
                         <div class="profile" id="profileDiv">
                             <div class="element">
-                                <button class="client-buy-btn active" id="back--order">
+                                <button class="client-buy-btn active" id="back-5">
                                     <img class="client--order-header-img" src="images/icon-left.png" alt="">
                                 </button>
                                 <h1 class="order-header--text">Profil</h1>
@@ -450,7 +450,7 @@
                     <div>
                         <div class="information" id="informationDiv">
                             <div class="element element-plus">
-                                <button class="client-buy-btn active" id="back--order">
+                                <button class="client-buy-btn active" id="back-3">
                                     <img class="client--order-header-img" src="images/icon-left.png" alt="">
                                 </button>
                                 <h1 class="information--head-title">Information</h1>
@@ -486,7 +486,7 @@
                     <div>
                        <div class="order--profile-or-burger" id="orderDiv">
                            <div class="element order--element">
-                               <button class="client-buy-btn active" id="back--order">
+                               <button class="client-buy-btn active" id="back-2">
                                    <img class="client--order-header-img" src="images/icon-left.png" alt="">
                                 </button>
                                 <h1 class="order--title">Orders history</h1>

@@ -171,7 +171,7 @@ body{
 }
 .head__input{
     border-radius: 8px;
-    /* border: 1px solid var(--base-dark-line, #393C49); */
+    color: var(--text-lighter, #E0E6E9);
     background: var(--base-form-bg, #2D303E);
     display: flex;
     width: 370px;
@@ -375,6 +375,12 @@ body{
     line-height: 140%; 
 }
 .card__btn{
+    color: #FFF;
+    font-family: Barlow;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
     display: flex;
     width: 180px;
     height: 46px;
@@ -696,9 +702,9 @@ body{
     padding: 50px;
     z-index: 100;
 }
-.order--background:hover{
-    border-radius: 8px 8px 0px 0px;
+.order--history-title:hover{
     background: rgba(234, 124, 105, 0.26);
+    
 }
 .order--background{
     border-radius: 8px;
@@ -728,6 +734,7 @@ body{
     display: block;
     padding-left: 35px;
     padding-top: 25px;
+    padding-bottom: 25px;
 }
 .order--title{
     color: var(--white, #FFF);
@@ -968,7 +975,7 @@ body{
     line-height: 140%;
     margin: 0;
 }
-
+/* oops */
 .delete > * {
     pointer-events: none;
 }
@@ -1166,6 +1173,13 @@ body{
     display: flex;
     align-items: center;
 }
+.border-bottom-right {
+    border-bottom-right-radius: 28px;
+}
+
+.border-top-right {
+    border-top-right-radius: 28px;
+}
 
 @media (max-width:440px){
     .tabs{
@@ -1283,7 +1297,7 @@ body{
     }
     .window__text-title{
         color: var(--text-lighter, #E0E6E9);
-        padding-bottom: 190px;
+        padding-bottom: 70px;
     }
     .window__text-2{
         padding-bottom: 0;
@@ -1462,6 +1476,7 @@ body{
     }
     .order--payment{
         width: 100%;
+        overflow: auto;
         margin: auto;
         padding: 0;
     }
@@ -1502,5 +1517,10 @@ body{
         margin: auto;
         width: 90%;
     }
+    .card__btn:hover{
+        background-color: #FFF;
+        transform: scale(1.03);
+    }
+    
 
 }
