@@ -47,11 +47,6 @@ function giveValue(evt){
 }
 
 
-
-window.addEventListener('click', function(event) {
-    // console.log(event.target);
-})
-
 function watchAnyObject(
     object = {},
     methods = [],
@@ -69,3 +64,27 @@ function watchAnyObject(
       object[method] = newMethod.bind(object);
     }
   }
+
+const menuBtn2 = document.querySelector('.menu--btn-1');
+const menu2 = document.querySelector('.choose__select-card');
+
+menu2.addEventListener('click', () => {
+    menuBtn2.classList.toggle('menu--btn-1--active');
+    menu2.classList.toggle('choose__select-card--active');
+});
+
+const tabItem2 = document.querySelectorAll('.select--title-1');
+const value2 = document.querySelector('.select__text--title');
+
+tabItem2.forEach(function (element){
+    element.addEventListener('click' , giveValue2);
+    console.log(element);
+})
+
+function giveValue2(evt){
+    let data = value2.textContent;
+    const tabTarget = evt.currentTarget;
+
+    value2.textContent = tabTarget.textContent;
+    tabTarget.textContent = data;
+}
