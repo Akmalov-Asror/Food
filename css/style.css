@@ -283,6 +283,60 @@ body{
     border-top: 1px solid;
 
 }
+.menu--btn{
+    position: absolute;
+    display: none;
+    top: 50px;
+    flex-direction: column;
+    border: 1px solid white;
+    border-top: none;
+    padding: 0;
+}
+.menu--btn--active{
+    display: flex !important;
+    z-index: 1;
+    background-color: #1F1D2B;
+    padding: -1 50px;
+    justify-content: inherit;
+    text-align: center;
+    width: 173px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.menu--btn-1{
+    position: absolute;
+    display: none;
+    top: 43px;
+    flex-direction: column;
+    border: 1px solid #393C49;
+    border-top: none;
+    padding: 0;
+}
+.menu--btn-1--active{
+    display: flex !important;
+    z-index: 1;
+    background-color: #1F1D2B;
+    padding: -1 50px;
+    justify-content: inherit;
+    text-align: center;
+    width: 173px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.select--title{
+    font-size: 14px;
+    color: #E0E6E9;
+    padding-top: 10px;
+    padding-bottom: 18px;
+    border-top: 1px solid #393C49;
+}
+.select--title-1{
+    font-size: 14px;
+    color: #E0E6E9;
+    padding-top: 10px;
+    padding-bottom: 18px;
+    border-top: 1px solid #393C49;
+}
 .card__btn:hover{
     background-color: #FFF;
     transform: scale(1.03);
@@ -1233,6 +1287,7 @@ body{
     .menu-btn{
         border: none;
         width: 102px;
+        top: 40px;
         background-color: #1F1D2B;
     }
     .select__title{
@@ -1379,6 +1434,7 @@ body{
     .order--profile-or-burger{
         width: 100%;
         padding: 0;
+        overflow: auto;
     }
     .order--background{
         width: 370px;
