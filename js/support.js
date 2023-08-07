@@ -814,3 +814,4 @@ back5.addEventListener('click', function () {
     }
     wDiv.classList.remove('bg__color--active');
 });
+    

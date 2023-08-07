@@ -77,11 +77,11 @@ const tabItem2 = document.querySelectorAll('.select--title-1');
 const value2 = document.querySelector('.select__text--title');
 
 tabItem2.forEach(function (element){
-    element.addEventListener('click' , giveValue2);
+    element.addEventListener('click' , giveValue);
     console.log(element);
 })
 
-function giveValue2(evt){
+function giveValue(evt){
     let data = value2.textContent;
     const tabTarget = evt.currentTarget;
 
