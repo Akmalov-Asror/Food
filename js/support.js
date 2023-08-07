@@ -751,17 +751,44 @@ gotoClientOrder.addEventListener('click', function () {
 
 const hamburger = document.getElementById('hamburger');
 
+let previous;
 function applyRadius(index) {
     const buttons = document.querySelectorAll('.li-1');
 
-    if (index > -1) {
-        buttons[index - 1].classList.add('border-bottom-right');
+    // buttons.forEach((element) => element.classList.remove('border-bottom-right') && element.classList.remove('border-top-right') )
+    if(previous){
+    let p = previous.previousElementSibling;
+    let n = previous.nextElementSibling;
+    if(p){
+    p.classList.remove('border-bottom-right')
+    }
+    if(n){
+    n.classList.remove('border-top-right')
+    }
     }
 
-    if (index < buttons.length - 1) {
-        buttons[index + 1].classList.add('border-top-right');
+    index--;
+
+    let previousSibling = buttons[index].previousElementSibling;
+    let nextSibling = buttons[index].nextElementSibling;
+    if(previousSibling){
+        previousSibling.classList.add('border-bottom-right');
     }
+    if(nextSibling){
+        nextSibling.classList.add('border-top-right');
+    }
+
+    previous = buttons[index]
+
+    // if (index > -1) {
+    //     buttons[index - 1].classList.add('border-bottom-right');
+    // }
+
+    // if (index < buttons.length - 1) {
+    //     buttons[index + 1].classList.add('border-top-right');
+    // }
 }
+
 const back = document.getElementById('back');
 
 back.addEventListener('click' , function(){
@@ -814,4 +841,3 @@ back5.addEventListener('click', function () {
     }
     wDiv.classList.remove('bg__color--active');
 });
-    
