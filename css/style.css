@@ -1331,11 +1331,13 @@ body{
     .li-1:nth-child(6){
         display: none;  
     }
+    
 
     .li-1{
         height: 100px;
         padding: 0;
         background: none;
+        position: relative;
     }
     .li-1--active{
         width: 100px;
@@ -1615,6 +1617,7 @@ body{
         transform: scale(1.03);
     }
     .number-class{
+        position: absolute;
         right: 10px;
         border: 1px solid #EA7C69;
         font-size: 10px;
