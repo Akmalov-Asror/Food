@@ -358,6 +358,10 @@ function AddOrder(name, price, count, id, img) {
         });
     };
     localStorage.setItem('products', JSON.stringify(getIdByCart));
+    
+    CounterCard();
+    
+
 }
 
 function createProduct(pro) {
@@ -464,6 +468,8 @@ function addOrder(addproductId) {
     }
     saveProductsToLocalStorage(selectProductAllAddOrder);
     calculateTotalAllProducts();
+    console.log('sff');
+
 }
 
 
@@ -483,6 +489,7 @@ function RemoveOrder(productId){
         windowItemActive.classList.add('window__item--active');
     }
     calculateTotalAllProducts();
+    CounterRemove();
 }
 
 function saveProductsToLocalStorage(products) {
@@ -693,7 +700,6 @@ const confirm = document.getElementById('gotoOrder');
 
 confirm.addEventListener('click', addorderNumber());
 
-
 window.addEventListener('load' , generateOrderHTML);
 
 const cardNumberInput = document.getElementById('cardNumber');
@@ -757,14 +763,14 @@ function applyRadius(index) {
 
     // buttons.forEach((element) => element.classList.remove('border-bottom-right') && element.classList.remove('border-top-right') )
     if(previous){
-    let p = previous.previousElementSibling;
-    let n = previous.nextElementSibling;
-    if(p){
-    p.classList.remove('border-bottom-right')
-    }
-    if(n){
-    n.classList.remove('border-top-right')
-    }
+            let p = previous.previousElementSibling;
+            let n = previous.nextElementSibling;
+        if(p){
+            p.classList.remove('border-bottom-right')
+        }
+        if(n){
+            n.classList.remove('border-top-right')
+        }
     }
 
     index--;
@@ -777,16 +783,21 @@ function applyRadius(index) {
     if(nextSibling){
         nextSibling.classList.add('border-top-right');
     }
+    
+    previous = buttons[index];
+    wDiv.addEventListener('click', function () {
+        if (!wDiv.classList.contains('bg__color--active')) {
+            let p1 = previous.previousElementSibling;
+            let n1 = previous.nextElementSibling;
+            if(p1){
+                p1.classList.remove('border-bottom-right')
+            }
+            if(n1){
+                n1.classList.remove('border-top-right')
+            }
+        }
+    })
 
-    previous = buttons[index]
-
-    // if (index > -1) {
-    //     buttons[index - 1].classList.add('border-bottom-right');
-    // }
-
-    // if (index < buttons.length - 1) {
-    //     buttons[index + 1].classList.add('border-top-right');
-    // }
 }
 
 const back = document.getElementById('back');
@@ -841,3 +852,15 @@ back5.addEventListener('click', function () {
     }
     wDiv.classList.remove('bg__color--active');
 });
+
+
+const numberCounter = document.getElementById('number-counter');
+
+function CounterCard() {
+    const localStorageProducts = JSON.parse(localStorage.getItem('products')) || [];
+        numberCounter.classList.add('number-class--active');
+        numberCounter.textContent = localStorageProducts.length;
+}
+function CounterRemove() {
+    numberCounter.classList.remove('number-class--active');
+}

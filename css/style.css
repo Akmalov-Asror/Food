@@ -82,6 +82,7 @@ body{
     width: 100%;
     height: 108px;
     background-color: #1F1D2B;
+    position: relative;
 }
 .li-1--active{
     width: 140px;
@@ -354,6 +355,7 @@ body{
 }
 .card__btn:hover{
     background-color: #FFF;
+    color: var(--primary-color, #EA7C69);
     transform: scale(1.03);
 }
 .select__title:hover{
@@ -1249,6 +1251,21 @@ body{
 .border-top-right {
     border-top-right-radius: 28px;
 }
+.number-class{
+    display: none;
+    padding: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background: white;
+    font-size: 8px;
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+}
+.number-class--active{
+    display: block;
+}
 
 @media (max-width:440px){
     .tabs{
@@ -1597,6 +1614,10 @@ body{
         background-color: #FFF;
         transform: scale(1.03);
     }
-    
+    .number-class{
+        right: 10px;
+        border: 1px solid #EA7C69;
+        font-size: 10px;
+    }
 
 }
